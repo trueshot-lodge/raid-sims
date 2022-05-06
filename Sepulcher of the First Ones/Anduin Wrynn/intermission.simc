@@ -1,0 +1,13 @@
+enemy=remnant
+enemy_death_pct=60
+
+max_time=77
+vary_combat_length=0
+
+raid_events=/adds,name=monstrous,count=1,first=9,cooldown=38,duration=15
+raid_events+=/adds,name=fiends1,count=4,first=5,cooldown=38,duration=13
+raid_events+=/adds,name=fiends2,count=3,first=7,cooldown=38,duration=13
+raid_events+=/adds,name=fiends3,count=2,first=9,cooldown=38,duration=13
+raid_events+=/adds,name=fiends4,count=2,first=11,cooldown=38,duration=13
+raid_events+=/adds,name=fiends5,count=2,first=12,cooldown=38,duration=13
+raid_events+=/adds,name=fiends6,count=1,first=13,cooldown=38,duration=13

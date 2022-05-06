@@ -1,0 +1,105 @@
+ignore_invulnerable_targets=1
+
+# about 10:30 in length
+max_time=630
+vary_combat_length=0.03
+
+# lust first intermission
+override.bloodlust=1
+bloodlust_time=170
+
+# set up 3 anduin enemies so we can control CA and execute uptimes according to each phase
+enemy=anduin_p1
+enemy_fixed_health_percentage=100
+
+enemy=anduin_p2
+enemy_fixed_health_percentage=45
+
+enemy=anduin_p3
+enemy_fixed_health_percentage=10
+
+# set up 2 remnant enemies so we can adjust for realistic CA uptimes
+# have to be fancy with death percentages since enemy health will decay constantly from its initial hp at the start of the fight to its death pct at the end
+# based on a sample log the first remnant could drop below 70% at 3:35, so the death pct has to be adjusted so that the health drops below 70% at ~34% of the way into the fight
+# which means we want the death pct to be ~12%
+enemy=remnant_1
+enemy_death_pct=12
+
+# same here but this one drops below 70% at 8:20, ~79% of the way into the fight, so death pct needs to be ~62%
+enemy=remnant_2
+enemy_death_pct=62
+
+# p1 anduin is active at start and goes immune at 2:45
+raid_events=/invulnerable,retarget=1,target=anduin_p1,first=165,cooldown=1000,duration=1000
+
+# p2 anduin is immune at start, becomes active at 4:08 and goes immune at 6:59
+raid_events+=/invulnerable,retarget=1,target=anduin_p2,first=0,cooldown=1000,duration=248
+raid_events+=/invulnerable,retarget=1,target=anduin_p2,first=419,cooldown=1000,duration=1000
+
+# p3 anduin is immune at start and becomes active at 8:26
+raid_events+=/invulnerable,retarget=1,target=anduin_p3,first=0,cooldown=1000,duration=506
+
+# remnant 1 is immune at the start, becomes active at 2:50, goes immune at 4:07
+raid_events+=/invulnerable,retarget=1,target=remnant_1,first=0,cooldown=1000,duration=170
+raid_events+=/invulnerable,retarget=1,target=remnant_1,first=247,cooldown=1000,duration=1000
+
+# remnant 2 is immune at the start, becomes active at 7:08, goes immune at 8:25
+raid_events+=/invulnerable,retarget=1,target=remnant_2,first=0,cooldown=1000,duration=428
+raid_events+=/invulnerable,retarget=1,target=remnant_2,first=505,cooldown=1000,duration=1000
+
+# kingsmourne 1 at 0:51 and then back before blasphemy
+# assume the player is going down, so make anduin inactive and spawn despair/doubts
+# how fast these group up depends on comp but assume a couple are grouped fairly quickly and then the last couple a bit slower
+raid_events+=/invulnerable,retarget=1,target=anduin_p1,first=51,cooldown=1000,duration=30
+raid_events+=/adds,name=despair_km1,count=1,first=51,cooldown=1000,duration=20
+raid_events+=/adds,name=doubts1_km1,count=2,first=53,cooldown=1000,duration=8
+raid_events+=/adds,name=doubts2_km1,count=2,first=57,cooldown=1000,duration=8
+
+# kingsmourne 2 at 1:51 and then back before blasphemy
+# assume the palyer is staying up, so spawn souls
+# these are up for about 30 seconds but duration should be reduced or basically removed entirely if you're not actually hitting these the entire time
+# assume the boss is dragged off of them after a short period
+raid_events+=/adds,name=souls_km2,count=11,first=111,cooldown=1000,duration=10
+
+# intermission damage buff for the player
+raid_events+=/damage_done_buff,first=170,cooldown=258,duration=77,multiplier=2.0
+
+# intermission adds, staggered to simulate grouping non-instantly and extending buffs that proc off new targets
+raid_events+=/adds,name=monstrous_wave1,count=1,first=179,cooldown=258,duration=15
+raid_events+=/adds,name=fiends1_wave1,count=4,first=175,cooldown=258,duration=13
+raid_events+=/adds,name=fiends2_wave1,count=3,first=177,cooldown=258,duration=13
+raid_events+=/adds,name=fiends3_wave1,count=2,first=179,cooldown=258,duration=13
+raid_events+=/adds,name=fiends4_wave1,count=2,first=181,cooldown=258,duration=13
+raid_events+=/adds,name=fiends5_wave1,count=2,first=182,cooldown=258,duration=13
+raid_events+=/adds,name=fiends6_wave1,count=1,first=183,cooldown=258,duration=13
+
+raid_events+=/adds,name=monstrous_wave2,count=1,first=217,cooldown=258,duration=15
+raid_events+=/adds,name=fiends1_wave2,count=4,first=213,cooldown=258,duration=13
+raid_events+=/adds,name=fiends2_wave2,count=3,first=215,cooldown=258,duration=13
+raid_events+=/adds,name=fiends3_wave2,count=2,first=217,cooldown=258,duration=13
+raid_events+=/adds,name=fiends4_wave2,count=2,first=219,cooldown=258,duration=13
+raid_events+=/adds,name=fiends5_wave2,count=2,first=220,cooldown=258,duration=13
+raid_events+=/adds,name=fiends6_wave2,count=1,first=221,cooldown=258,duration=13
+
+# first round of grim reflections start at 4:20
+raid_events+=/adds,name=reflection1_wave1,count=1,first=260,cooldown=1000,duration=10
+raid_events+=/adds,name=reflection2_wave1,count=1,first=270,cooldown=1000,duration=10
+raid_events+=/adds,name=reflection3_wave1,count=1,first=280,cooldown=1000,duration=10
+raid_events+=/adds,name=reflection4_wave1,count=1,first=290,cooldown=1000,duration=10
+
+# kingsmourne 3 at 5:01
+# assume the player is going down, so make anduin inactive and spawn despair/doubts
+raid_events+=/invulnerable,retarget=1,target=anduin_p2,first=301,cooldown=1000,duration=30
+raid_events+=/adds,name=despair_km3,count=1,first=301,cooldown=1000,duration=20
+raid_events+=/adds,name=doubts1_km3,count=2,first=303,cooldown=1000,duration=8
+raid_events+=/adds,name=doubts2_km3,count=2,first=307,cooldown=1000,duration=8
+
+# second round of grim reflections start at 5:46
+raid_events+=/adds,name=reflection1_wave2,count=1,first=346,cooldown=1000,duration=10
+raid_events+=/adds,name=reflection2_wave2,count=1,first=356,cooldown=1000,duration=18
+raid_events+=/adds,name=reflection3_wave2,count=1,first=400,cooldown=1000,duration=10
+raid_events+=/adds,name=reflection4_wave2,count=1,first=410,cooldown=1000,duration=10
+
+# kingsmourne 4 at 6:01
+# assume the hunter is staying up, so spawn souls
+raid_events+=/adds,name=souls_km4,count=11,first=361,cooldown=1000,duration=10
