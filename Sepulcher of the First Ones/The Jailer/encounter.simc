@@ -1,13 +1,44 @@
-# about 11:10 in length, this may vary significantly though depending on if you exploit the boss or not
-max_time=670
-vary_combat_length=0.05
+ignore_invulnerable_targets=1
 
-# account for the shield and heal, this will shorted the CA period slightly and extend the execute period
+# about 11:10 in length, this may vary significantly depending on if you exploit the boss or not
+max_time=670
+vary_combat_length=0.02
+
+# 116m base health
+# 17.3m heal/shield
+# 133.3 total
+
+# enemies decay constantly to 0 but we have to account for the shield and heal and artificially shorten the CA window
+# considering the total fight ends up ~133.3 dmg while his base health is 116m, with the first 34.8m in CA range, that means ~26% of the fight is in CA range
+# math that out and about 94.6 initial percent should give us that
 enemy=jailer
 enemy_initial_health_percentage=94.6
 
-raid_events=/adds,name=mc1,count=4,first=200,cooldown=1000,duration=7
+# swap in a new enemy and force him into execute range for the rest of the fight when we are expected to hit execute range
+enemy=jailer_execute
+enemy_fixed_health_percentage=10
+
+raid_events=/invulnerable,retarget=1,target=jailer_execute,first=0,cooldown=1000,duration=466
+raid_events+=/invulnerable,retarget=1,target=jailer,first=466,cooldown=1000,duration=1000
+
+raid_events+=/adds,name=mc1,count=4,first=200,cooldown=1000,duration=7
 raid_events+=/adds,name=mc2,count=4,first=250,cooldown=1000,duration=7
 raid_events+=/adds,name=mc3,count=4,first=300,cooldown=1000,duration=10
 raid_events+=/adds,name=mc4,count=4,first=360,cooldown=1000,duration=10
 raid_events+=/adds,name=torments,count=10,first=440,cooldown=1000,duration=10
+
+# azerite radiation dmg buffs
+raid_events+=/damage_done_buff,first=27,cooldown=1000,duration=30,multiplier=0.09
+raid_events+=/damage_done_buff,first=73,cooldown=1000,duration=30,multiplier=0.09
+raid_events+=/damage_done_buff,first=108,cooldown=1000,duration=30,multiplier=0.09
+raid_events+=/damage_done_buff,first=138,cooldown=1000,duration=30,multiplier=0.18
+
+raid_events+=/damage_done_buff,first=220,cooldown=1000,duration=30,multiplier=0.09
+raid_events+=/damage_done_buff,first=267,cooldown=1000,duration=30,multiplier=0.09
+raid_events+=/damage_done_buff,first=320,cooldown=1000,duration=30,multiplier=0.09
+raid_events+=/damage_done_buff,first=354,cooldown=1000,duration=30,multiplier=0.09
+
+raid_events+=/damage_done_buff,first=424,cooldown=1000,duration=20,multiplier=0.09
+raid_events+=/damage_done_buff,first=444,cooldown=1000,duration=30,multiplier=0.18
+raid_events+=/damage_done_buff,first=477,cooldown=1000,duration=30,multiplier=0.09
+raid_events+=/damage_done_buff,first=516,cooldown=1000,duration=30,multiplier=0.09

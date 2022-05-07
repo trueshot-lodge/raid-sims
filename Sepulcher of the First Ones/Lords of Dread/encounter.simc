@@ -9,6 +9,6 @@ bloodlust_time=45
 enemy=malganis
 enemy=kintessa
 
-raid_events+=/adds,name=shadow,count=1,first=47,cooldown=70,duration=12
+raid_events=/adds,name=shadow,count=1,first=47,cooldown=70,duration=12
 raid_events+=/vulnerable,first=54,cooldown=145,duration=20,multiplier=1.0,target=malganis
 raid_events+=/vulnerable,first=54,cooldown=145,duration=20,multiplier=1.0,target=kintessa
