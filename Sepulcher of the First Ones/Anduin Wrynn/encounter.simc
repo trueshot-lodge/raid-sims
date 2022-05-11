@@ -57,7 +57,7 @@ raid_events+=/adds,name=doubts2_km1,count=2,first=57,cooldown=1000,duration=8
 
 # kingsmourne 2 at 1:51 and then back before blasphemy
 # assume the palyer is staying up, so spawn souls
-# these are up for about 30 seconds but duration should be reduced or basically removed entirely if you're not actually hitting these the entire time
+# these are up for about 30 seconds but duration should be reduced or removed entirely if you're not actually hitting these the entire time
 # assume the boss is dragged off of them after a short period
 raid_events+=/adds,name=souls_km2,count=11,first=111,cooldown=1000,duration=10
 

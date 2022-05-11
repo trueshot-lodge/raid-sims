@@ -1,10 +1,6 @@
 # The Jailer
 
-Cooldowns are used on pull and then saved whenever possible for cleave when it can do so without losing a use. The second Trueshot is up for debate though and some builds prefer a use at 2 minutes over others preferring a delay until 3 minutes. Using it as early as possible does let it benefit from CA and a Azerite Radiation buff while not risking being interrupted by getting chosen by the mind control, but will not have a chance to cleave the first mind control set. The apl has a variable to control that decision `cooldown_at_2`. To change the default of 1, search for the line in the apl and change the `value=1` to `value=0`.
->actions+=/variable,name=cooldown_at_2,op=set,value=0
-
-or
->actions+=/variable,name=cooldown_at_2,op=set,value=1
+Cooldowns are used on pull and then saved whenever possible for cleave when it can do so without losing a use.
 
 Simming the Boon of Azeroth buff is done with this external option:
 >external_buffs.boon_of_azeroth_mythic=388

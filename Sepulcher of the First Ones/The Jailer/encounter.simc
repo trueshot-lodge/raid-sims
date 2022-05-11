@@ -1,3 +1,4 @@
+merge_enemy_priority_dmg=1
 ignore_invulnerable_targets=1
 
 # about 11:10 in length, this may vary significantly depending on if you exploit the boss or not
@@ -21,11 +22,11 @@ enemy_fixed_health_percentage=10
 raid_events=/invulnerable,retarget=1,target=jailer_execute,first=0,cooldown=1000,duration=466
 raid_events+=/invulnerable,retarget=1,target=jailer,first=466,cooldown=1000,duration=1000
 
-raid_events+=/adds,name=mc1,count=4,first=200,cooldown=1000,duration=7
-raid_events+=/adds,name=mc2,count=4,first=250,cooldown=1000,duration=7
-raid_events+=/adds,name=mc3,count=4,first=300,cooldown=1000,duration=10
-raid_events+=/adds,name=mc4,count=4,first=360,cooldown=1000,duration=10
-raid_events+=/adds,name=torments,count=10,first=440,cooldown=1000,duration=10
+raid_events+=/adds,name=mc1,count=4,first=200,cooldown=1000,duration=8
+raid_events+=/adds,name=mc2,count=4,first=250,cooldown=1000,duration=8
+raid_events+=/adds,name=mc3,count=4,first=300,cooldown=1000,duration=8
+raid_events+=/adds,name=mc4,count=4,first=360,cooldown=1000,duration=8
+raid_events+=/adds,name=torments,count=10,first=440,cooldown=1000,duration=8
 
 # azerite radiation dmg buffs
 raid_events+=/damage_done_buff,first=27,cooldown=1000,duration=30,multiplier=0.09

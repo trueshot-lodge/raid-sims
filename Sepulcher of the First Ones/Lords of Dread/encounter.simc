@@ -1,3 +1,5 @@
+merge_enemy_priority_dmg=1
+
 # about 8:30
 max_time=510
 vary_combat_length=0.05

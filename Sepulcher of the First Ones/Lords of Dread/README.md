@@ -1,3 +1,3 @@
 # Lords of Dread
 
-Cooldowns are saved for each burn phase if they wouldn't otherwise be up if used on pull.
+Cooldowns are saved for each burn phase unless they can be used without losing a use.
