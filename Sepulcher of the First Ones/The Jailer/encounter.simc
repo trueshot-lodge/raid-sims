@@ -26,6 +26,13 @@ raid_events+=/adds,name=mc1,count=4,first=200,cooldown=1000,duration=8
 raid_events+=/adds,name=mc2,count=4,first=250,cooldown=1000,duration=8
 raid_events+=/adds,name=mc3,count=4,first=300,cooldown=1000,duration=8
 raid_events+=/adds,name=mc4,count=4,first=360,cooldown=1000,duration=8
+
+# randomly stun during the mc sets to imitate being chosen as an mc target, ideally this ends up at about 1-2 per iteration
+raid_events+=/stun,first=197,cooldown=1000,duration=11,player_chance=0.25
+raid_events+=/stun,first=247,cooldown=1000,duration=11,player_chance=0.25
+raid_events+=/stun,first=297,cooldown=1000,duration=11,player_chance=0.25
+raid_events+=/stun,first=357,cooldown=1000,duration=11,player_chance=0.25
+
 raid_events+=/adds,name=torments,count=10,first=440,cooldown=1000,duration=8
 
 # azerite radiation dmg buffs

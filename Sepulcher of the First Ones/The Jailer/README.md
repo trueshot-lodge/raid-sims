@@ -11,7 +11,9 @@ Forcing an extra Bloodlust after 10 minutes has to be done with this external op
 That value applies a new Bloodlust at 10:10.
 
 Also consider how ground effect uptimes might suffer on this fight due to movement, important covenant buff uptimes should be altered with sim options.
-These were made to match some averages from logs. While there are actually no Theotar logs the uptime is assumed based on the Blossoms uptimes that have been possible, then diminished a bit due to it being a random proc:
+These were made to match some averages from logs:
 >shadowlands.field_of_blossoms_duration_multiplier=0.5
 
->shadowlands.soothing_shade_duration_multiplier=0.75
+>shadowlands.soothing_shade_duration_multiplier=0.5
+
+All the above options are predefined in the apls.
