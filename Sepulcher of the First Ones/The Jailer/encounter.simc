@@ -22,10 +22,10 @@ enemy_fixed_health_percentage=10
 raid_events=/invulnerable,retarget=1,target=jailer_execute,first=0,cooldown=1000,duration=466
 raid_events+=/invulnerable,retarget=1,target=jailer,first=466,cooldown=1000,duration=1000
 
-raid_events+=/adds,name=mc1,count=4,first=200,cooldown=1000,duration=8
-raid_events+=/adds,name=mc2,count=4,first=250,cooldown=1000,duration=8
-raid_events+=/adds,name=mc3,count=4,first=300,cooldown=1000,duration=8
-raid_events+=/adds,name=mc4,count=4,first=360,cooldown=1000,duration=8
+raid_events+=/adds,name=mc1,count=3,first=200,cooldown=1000,duration=6
+raid_events+=/adds,name=mc2,count=3,first=250,cooldown=1000,duration=6
+raid_events+=/adds,name=mc3,count=3,first=300,cooldown=1000,duration=6
+raid_events+=/adds,name=mc4,count=3,first=360,cooldown=1000,duration=6
 
 # randomly stun during the mc sets to imitate being chosen as an mc target, ideally this ends up at about 1-2 per iteration
 raid_events+=/stun,first=197,cooldown=1000,duration=11,player_chance=0.25
