@@ -6,14 +6,14 @@ max_time=670
 vary_combat_length=0.02
 
 # 116m base health
-# 17.3m heal/shield
-# 133.3 total
+# 16.1m heal/shield
+# 122.1 total
 
 # enemies decay constantly to 0 but we have to account for the shield and heal and artificially shorten the CA window
-# considering the total fight ends up ~133.3 dmg while his base health is 116m, with the first 34.8m in CA range, that means ~26% of the fight is in CA range
-# math that out and about 94.6 initial percent should give us that
+# considering the total fight ends up ~122.1 dmg while his base health is 116m, with the first 34.8m in CA range, that means ~28.5% of the fight is in CA range
+# math that out and about 97.9 initial percent should give us that
 enemy=jailer
-enemy_initial_health_percentage=94.6
+enemy_initial_health_percentage=97.9
 
 # swap in a new enemy and force him into execute range for the rest of the fight when we are expected to hit execute range
 enemy=jailer_execute
