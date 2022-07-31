@@ -1,0 +1,11 @@
+# about 5:00 give or take 15s
+max_time=300
+vary_combat_length=0.05
+
+# lust at 3:55
+override.bloodlust=1
+bloodlust_time=295
+
+enemy=sludgefist
+
+raid_events+=/vulnerable,first=56,cooldown=69,duration=12,multiplier=1.0
