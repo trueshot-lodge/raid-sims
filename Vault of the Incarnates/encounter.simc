@@ -1,0 +1,37 @@
+enemy=kurog
+
+ignore_invulnerable_targets=1
+
+# about 9:10 in length +/- 15 sec
+max_time=550
+vary_combat_length=0.03
+
+# flamewrought eradicator in p1 for about 1:30 (actually about 8 sec in but this simplifies opener apl)
+raid_events=/adds,name=flamewrought_eradicator,count=1,first=0,cooldown=1000,duration=90
+
+# boss goes immune with 100 energy at about 2:05 until about 3:50
+raid_events+=/invulnerable,retarget=1,first=125,cooldown=230,duration=105
+
+# big intermission adds at about 2:10
+raid_events+=/adds,name=thundering_ravager,count=1,first=130,cooldown=1000,duration=60
+raid_events+=/adds,name=blazing_fiend,count=1,first=130,cooldown=1000,duration=100
+# continuous hellions
+raid_events+=/adds,name=hellion,count=1,first=130,last=230,cooldown=10,duration=9
+
+# earthwrought smasher in p2 for about 1:30 at 3:50
+raid_events+=/adds,name=earthwrought_smasher,count=1,first=230,cooldown=1000,duration=90
+
+# 4 breakers every 50 sec in p2
+raid_events+=/adds,name=breaker,count=4,first=280,last=330,cooldown=50,duration=10
+
+# boss goes immune with 100 energy at about 5:55 until about 7:40
+
+# big intermission adds at about 6:00
+raid_events+=/adds,name=frozen_destroyer,count=1,first=360,cooldown=1000,duration=60
+raid_events+=/adds,name=tectonic_crusher,count=1,first=360,cooldown=1000,duration=100
+
+# 4 intermission breakers at 7:00
+raid_events+=/adds,name=breaker,count=4,first=415,cooldown=1000,duration=15
+
+# frostwrought dominator in p3 at 7:40 until boss dies
+raid_events+=/adds,name=frostwrought_dominator,count=1,first=460,cooldown=1000,duration=180
