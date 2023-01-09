@@ -1,3 +1,5 @@
+merge_enemy_priority_dmg=1
+
 enemy=kurog
 
 ignore_invulnerable_targets=1
@@ -7,7 +9,7 @@ max_time=550
 vary_combat_length=0.03
 
 # flamewrought eradicator in p1 for about 1:30 (actually about 8 sec in but this simplifies opener apl)
-raid_events=/adds,name=flamewrought_eradicator,count=1,first=0,cooldown=1000,duration=90
+raid_events=/adds,name=flamewrought_eradicator,count=1,first=0,cooldown=1000,duration=90,type=add_boss
 
 # boss goes immune with 100 energy at about 2:05 until about 3:50
 raid_events+=/invulnerable,retarget=1,first=125,cooldown=230,duration=105
@@ -19,7 +21,7 @@ raid_events+=/adds,name=blazing_fiend,count=1,first=130,cooldown=1000,duration=1
 raid_events+=/adds,name=hellion,count=1,first=130,last=230,cooldown=10,duration=9
 
 # earthwrought smasher in p2 for about 1:30 at 3:50
-raid_events+=/adds,name=earthwrought_smasher,count=1,first=230,cooldown=1000,duration=90
+raid_events+=/adds,name=earthwrought_smasher,count=1,first=230,cooldown=1000,duration=90,type=add_boss
 
 # 4 breakers every 50 sec in p2
 raid_events+=/adds,name=breaker,count=4,first=280,last=330,cooldown=50,duration=10
