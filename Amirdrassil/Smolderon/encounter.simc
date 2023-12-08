@@ -1,0 +1,15 @@
+# about 6:50 min in length
+max_time=410
+vary_combat_length=0.02
+
+
+enemy=smolderon
+
+override.bloodlust=1
+bloodlust_time=360
+
+
+raid_events+=/vulnerable,first=69,cooldown=1000,duration=20
+raid_events+=/vulnerable,first=169,cooldown=1000,duration=20
+raid_events+=/vulnerable,first=269,cooldown=1000,duration=20
+raid_events+=/vulnerable,first=365,cooldown=1000,duration=20
