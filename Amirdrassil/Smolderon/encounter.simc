@@ -6,7 +6,7 @@ vary_combat_length=0.02
 enemy=smolderon
 
 override.bloodlust=1
-bloodlust_time=360
+bloodlust_time=262
 
 
 raid_events+=/vulnerable,first=69,cooldown=1000,duration=20
